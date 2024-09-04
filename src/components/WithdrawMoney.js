@@ -10,7 +10,7 @@ function WithdrawMoney() {
     const handleWithdraw = async () => {
         try {
             // Perform withdrawal
-            const response = await axios.post(`http://localhost:8080/accounts/${encodeURIComponent(accountNumber)}/withdraw`, null, {
+            const response = await axios.post(`https://fp2j79i1i8.execute-api.us-east-1.amazonaws.com/todraw`, null, {
                 params: { amount: parseFloat(amount) }
             });
 
