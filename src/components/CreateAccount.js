@@ -7,7 +7,7 @@ function CreateAccount() {
 
     const handleSubmit = async () => {
         try {
-            await axios.post('https://9fxmai9fu2.execute-api.us-east-1.amazonaws.com/create', {
+            await axios.post('http://banking-env-1.eba-tcavr6ba.us-east-1.elasticbeanstalk.com/accounts/create', {
                 accountNumber,
                 initialBalance
             });
