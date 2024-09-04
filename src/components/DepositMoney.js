@@ -10,9 +10,9 @@ function DepositMoney() {
     const handleSubmit = async () => {
         try {
             if (operation === 'deposit') {
-                await axios.post(`http://localhost:8080/accounts/${accountNumber}/deposit`, null, { params: { amount } });
+                await axios.post(`https://fp2j79i1i8.execute-api.us-east-1.amazonaws.com/deposit`, null, { params: { amount } });
             } else {
-                await axios.post(`http://localhost:8080/accounts/${accountNumber}/withdraw`, null, { params: { amount } });
+                await axios.post(`https://fp2j79i1i8.execute-api.us-east-1.amazonaws.com/todraw`, null, { params: { amount } });
             }
             alert('Operation successful!');
         } catch (error) {

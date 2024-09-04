@@ -8,7 +8,7 @@ function CheckBalance() {
 
     const handleCheckBalance = async () => {
         try {
-            const response = await axios.post('http://localhost:8080/accounts/getByNumber', { accountNumber });
+            const response = await axios.post('https://fp2j79i1i8.execute-api.us-east-1.amazonaws.com/post1/create', { accountNumber });
             setBalance(response.data.balance);
         } catch (err) {
             setError('Error fetching account balance');
